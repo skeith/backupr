@@ -1,18 +1,17 @@
-from faulthandler import disable
-from fileinput import filename
 import tkinter
 from tkinter import DISABLED, filedialog
 from tkinter.font import NORMAL
 from distutils.dir_util import copy_tree as ct
 import shutil
-import time
 
-filepath=""
 
 #posisi awal tombol dan label di window
 def awal():
+    #variabel dibuat global supaya bisa di panggil fungsi yang lain
     global but, but1, but2, l
+    #membuat label judul aplikasi
     l=tkinter.Label(w, text="Program Backup Folder/File",justify="center")
+    #membuat tombol pilihan sumber yang akan dibackup
     but=tkinter.Button(text="Nama Folder yang akan di Backup", command=namadir)
     but1=tkinter.Button(text="Nama File yang akan di backup", command=namafile)
     l.pack()
@@ -33,8 +32,9 @@ def batal():
 def batal1():
     but['state']=NORMAL
     but1['state']=NORMAL
-    but2['state']=NORMAL
-    but3.destroy()
+    #but2['state']=NORMAL
+    but5.destroy()
+    but6.destroy()
     but4.destroy()
     l2.destroy()
     l3.destroy()
@@ -155,9 +155,10 @@ def namadir2():
     but4.pack()
     print(filepath)   
     print(despath)
-
+#membuat form window utama
 w=tkinter.Tk()
+#membuat judul form window
 w.title("Tugas Kelompok R DTS PRO")
-
+#memanggil tombol/tampilan awal
 awal()
 w.mainloop()
