@@ -64,7 +64,7 @@ def bekap_berhasil():
     l2.destroy()
     l3.destroy()
     l4=tkinter.Label(w, text="Backup Berhasil",font="courier 20 bold",justify="center")
-    but7=tkinter.Button(text="Backup Lagi", command=reset)
+    but7=tkinter.Button(text="Backup Lagi", font="courier 15 bold",command=reset)
     l4.pack()
     but7.pack()
 
@@ -80,7 +80,7 @@ def bekap_gagal():
     l2.destroy()
     l3.destroy()
     l4=tkinter.Label(w, text="Backup Gagal",font="courier 20 bold",justify="center")
-    but7=tkinter.Button(text="Backup Lagi", command=reset)
+    but7=tkinter.Button(text="Backup Lagi", font="courier 15 bold",command=reset)
     l4.pack()
     but7.pack()
     
@@ -105,7 +105,7 @@ def bekapf_berhasil():
     l2.destroy()
     l3.destroy()
     l4=tkinter.Label(w, text="Backup Berhasil",font="courier 20 bold",justify="center")
-    but7=tkinter.Button(text="Backup Lagi", command=reset)
+    but7=tkinter.Button(text="Backup Lagi", font="courier 15 bold",command=reset)
     l4.pack()
     but7.pack()
     
@@ -121,7 +121,7 @@ def bekapf_gagal():
     l2.destroy()
     l3.destroy()
     l4=tkinter.Label(w, text="Backup Gagal",font="courier 20 bold",justify="center")
-    but7=tkinter.Button(text="Backup Lagi", command=reset)
+    but7=tkinter.Button(text="Backup Lagi", font="courier 15 bold",command=reset)
     l4.pack()
     but7.pack()
     
@@ -137,9 +137,9 @@ def reset():
 def namafile():
     global l2,but5,filepath
     filepath = filedialog.askopenfilename()
-    l2=tkinter.Label(w, text="Nama File yang akan dibackup adalah : " +filepath,justify="center")
+    l2=tkinter.Label(w, text="Nama File yang akan dibackup adalah : " +filepath,font="courier 15 bold",justify="center")
     l2.pack()
-    but5=tkinter.Button(text="Nama Folder destinasi", command=namadir2)
+    but5=tkinter.Button(text="Nama Folder destinasi", font="courier 15 bold",command=namadir2)
     but5.pack()
     but['state']=DISABLED
     but1['state']=DISABLED
@@ -149,9 +149,9 @@ def namafile():
 def namadir():
     global l2,but2,dirpath
     dirpath = filedialog.askdirectory()
-    l2=tkinter.Label(w, text="Folder yang akan dibackup adalah : " + dirpath ,justify="center")
+    l2=tkinter.Label(w, text="Folder yang akan dibackup adalah : " + dirpath ,font="courier 15 bold",justify="center")
     l2.pack()
-    but2=tkinter.Button(text="Nama Folder destinasi", command=namadir1)
+    but2=tkinter.Button(text="Nama Folder destinasi", font="courier 15 bold",command=namadir1)
     but2.pack()
     but1['state']=DISABLED
     but['state']=DISABLED
@@ -164,13 +164,13 @@ def namadir1():
     global l3
     global desti
     desti = filedialog.askdirectory()
-    l3=tkinter.Label(w, text="Folder destinasinya adalah : " +desti,justify="center")
+    l3=tkinter.Label(w, text="Folder destinasinya adalah : " +desti,font="courier 15 bold",justify="center")
     l3.pack()
     but['state']=DISABLED
     but1['state']=DISABLED
     but2['state']=DISABLED
-    but3=tkinter.Button(text="Backup", command=bekap)
-    but4=tkinter.Button(text="Batal", command=batal) 
+    but3=tkinter.Button(text="Backup", font="courier 15 bold",command=bekap)
+    but4=tkinter.Button(text="Batal", font="courier 15 bold",command=batal) 
     but3.pack()
     but4.pack()
     print(desti)
@@ -183,13 +183,13 @@ def namadir2():
     global l3
     global despath
     despath = filedialog.asksaveasfilename()
-    l3=tkinter.Label(w, text="Folder destinasinya adalah : " +despath,justify="center")
+    l3=tkinter.Label(w, text="Folder destinasinya adalah : " +despath,font="courier 15 bold",justify="center")
     l3.pack()
     but['state']=DISABLED
     but1['state']=DISABLED
     but5['state']=DISABLED
-    but6=tkinter.Button(text="Backup", command=bekapf)
-    but4=tkinter.Button(text="Batal", command=batal1) 
+    but6=tkinter.Button(text="Backup", font="courier 15 bold",command=bekapf)
+    but4=tkinter.Button(text="Batal", font="courier 15 bold",command=batal1) 
     but6.pack()
     but4.pack()
     print(filepath)   
@@ -198,7 +198,7 @@ def namadir2():
 #membuat form window utama
 w=tkinter.Tk()
 #mengatur luas form window
-w.geometry('500x500')
+w.geometry('1500x1500')
 #membuat judul form window
 w.title("Tugas Kelompok R DTS PRO")
 #memanggil tombol/tampilan awal
